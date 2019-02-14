@@ -3,6 +3,8 @@
     "module": "commonjs",
     "target": "esnext",
     "jsx": "preserve",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
     "lib": [
       "dom",
       "es2015",
@@ -13,6 +15,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": false,
