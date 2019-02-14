@@ -70,7 +70,7 @@ const HomepageContent: any = styled.div`
 const TypedContent = styled.h1`
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.1em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+  white-space: inherit; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   margin-bottom: 0.55em;
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -87,8 +87,8 @@ const TypedText = styled.div`
 
 export default class IndexPage extends React.Component<PageProps> {
   public render() {
-    const { data } = this.props;
-    const { edges, totalCount } = data.allMarkdownRemark;
+    // const { data } = this.props;
+    // const { edges, totalCount } = data.allMarkdownRemark;
     return (
       <Layout>
         <Wrapper fullWidth={true}>
@@ -99,9 +99,10 @@ export default class IndexPage extends React.Component<PageProps> {
                 {/* <img src={config.siteLogo} /> */}
                 <TypedContent>Hi. I am David</TypedContent>
                 <TypedText>
-                  <p>I write JavaScript, Java, C#, Angular, CSS, LESS, SASS </p>
-                  <p> and develop Ionic Hybrid Mobile Apps. I'm currently </p>
-                  <p>learning React and GatsbyJs which this site is written in.</p>
+                  <p>
+                    I write JavaScript, Java, C#, Angular, CSS, LESS, SASS and develop Ionic Hybrid Mobile Apps. I'm currently learning
+                    React and GatsbyJs which this site is written in.
+                  </p>
                 </TypedText>
                 <SocialLinks />
               </HomepageContent>
