@@ -67,10 +67,10 @@ const HomepageContent: any = styled.div`
   text-align: ${(props: any) => (props.center ? 'center' : 'left')};
 `;
 
-const TypedContent = styled.h1`
+const TypedHeading = styled.h1`
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.1em solid orange; /* The typwriter cursor */
-  white-space: inherit; /* Keeps the content on a single line */
+  white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   margin-bottom: 0.55em;
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -97,7 +97,7 @@ export default class IndexPage extends React.Component<PageProps> {
             <GridRow background={true}>
               <HomepageContent center={true}>
                 {/* <img src={config.siteLogo} /> */}
-                <TypedContent>Hi. I am David</TypedContent>
+                <TypedHeading>Hi. I am David</TypedHeading>
                 <TypedText>
                   <p>
                     I write JavaScript, Java, C#, Angular, CSS, LESS, SASS and develop Ionic Hybrid Mobile Apps. I'm currently learning
