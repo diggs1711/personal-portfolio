@@ -63,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
 const Footer = styled.footer`
   text-align: center;
   padding: 3rem 0;
+  display: block;
   span {
     font-size: 0.75rem;
   }
@@ -86,11 +87,12 @@ export class Layout extends React.PureComponent<{}> {
             <React.Fragment>
               <GlobalStyle />
               {children}
-              {/* <Footer>
-                &copy; {split(data.site.buildTime, '.')[2]} by David Higgins. All rights reserved. <br />
-                <a href="https://github.com/diggs1711/">GitHub Repository</a> <br />
-                <span>Last build: {data.site.buildTime}</span>
-              </Footer> */}
+              {
+                <Footer>
+                  &copy; {split(data.site.buildTime, '.')[2]} by David Higgins. All rights reserved. <br />
+                  <a href="https://github.com/diggs1711/">GitHub Repository</a> <br />
+                </Footer>
+              }
             </React.Fragment>
           </ThemeProvider>
         )}

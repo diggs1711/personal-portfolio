@@ -10,6 +10,8 @@ import rgba from 'polished/lib/color/rgba';
 import darken from 'polished/lib/color/darken';
 import lighten from 'polished/lib/color/lighten';
 import SocialLinks from '../components/SocialLinks';
+import Project from '../components/Project';
+import Zoom from 'react-reveal/Zoom';
 
 const Homepage = styled.main`
   display: flex;
@@ -31,7 +33,7 @@ const GridRow: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: ${(props: any) => (props.fullWidth ? `100vh` : `100%`)};
   background: ${(props: any) =>
     props.background
       ? `linear-gradient(
@@ -101,7 +103,7 @@ const ProfiilePic = styled.img`
   transition: all 0.3s linear;
   object-fit: cover;
   display: block;
-  margin: 2em auto 5em auto;
+  margin: 1em auto 3.5em auto;
 
   :hover {
     opacity: 0.8;
@@ -118,7 +120,7 @@ export default class IndexPage extends React.Component<PageProps> {
         <Wrapper fullWidth={true}>
           <Helmet title={`Homepage | ${config.siteTitle}`} />
           <Homepage>
-            <GridRow background={true}>
+            <GridRow fullWidth={true} background={true}>
               <HomepageContent center={true}>
                 {/* <img src={config.siteLogo} /> */}
                 <TypedHeading>Hi. I am David</TypedHeading>
@@ -130,15 +132,18 @@ export default class IndexPage extends React.Component<PageProps> {
             </GridRow>
             <GridRow>
               <HomepageContent>
-                <ProfiilePic height="200px" width="200px" src="/assets/profile.jpg" alt="profile picture" />
-                <h2>About Me</h2>
-                <p>
-                  Graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have over
-                  2.5 years of experience working with a major public sector client. I am passionate about Web Development and learning new
-                  technologies.
-                </p>
-                <hr />
-                <h2>Projects</h2>
+                <Zoom>
+                  <ProfiilePic height="200px" width="200px" src="/assets/profile.jpg" alt="profile picture" />
+                  <h2>About Me</h2>
+                  <p>
+                    Graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have
+                    over 2.5 years of experience working with a major public sector client. I am passionate about Web Development and
+                    learning new technologies.
+                  </p>
+                  <hr />
+                  <h2>Projects</h2>
+                </Zoom>
+                <Project />
               </HomepageContent>
             </GridRow>
           </Homepage>
