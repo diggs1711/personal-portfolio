@@ -5,11 +5,11 @@ import styled from 'styled-components';
 const SocialLinksContent = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2em;
+  margin: 2em 0;
 
   > a {
     transition: all 0.3s linear;
-    border-radius: 50%;
+    border-radius: 50% / 50%;
 
     &:hover {
       transform: scale(1.5);

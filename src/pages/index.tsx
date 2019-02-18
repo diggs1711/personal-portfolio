@@ -13,8 +13,9 @@ import SocialLinks from '../components/SocialLinks';
 
 const Homepage = styled.main`
   display: flex;
-  height: 100vh;
-  flex-direction: row;
+  flex-direction: column;
+  height: 100%;
+
   @media ${media.tablet} {
     height: 100%;
     flex-direction: column;
@@ -39,6 +40,7 @@ const GridRow: any = styled.div`
       ${rgba(lighten(0.1, props.theme.colors.grey.dark), 0.9)}), url(/assets/bg.jpg) no-repeat`
       : null};
   background-size: cover;
+  background-position: center;
   padding: 2rem 4rem;
   color: ${(props: any) => (props.background ? props.theme.colors.white : null)};
   h1 {
@@ -64,6 +66,7 @@ const blink = keyframes`
 
 const HomepageContent: any = styled.div`
   max-width: 30rem;
+  overflow: hidden;
   text-align: ${(props: any) => (props.center ? 'center' : 'left')};
 `;
 
@@ -74,7 +77,7 @@ const TypedHeading = styled.h1`
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   margin-bottom: 0.55em;
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: ${typing} 3.5s steps(40, end), ${blink} 0.75s step-end infinite;
+  animation: ${typing} 4s steps(40, end), ${blink} 0.75s step-end infinite;
 `;
 
 const TypedText = styled.div`
@@ -82,6 +85,21 @@ const TypedText = styled.div`
     margin: 0;
     margin-bottom: 0.3em;
     padding: 0;
+  }
+`;
+
+const ProfiilePic = styled.img`
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  filter: grayscale(1);
+  transition: all 0.3s linear;
+  object-fit: cover;
+  display: block;
+  margin: 2em auto 2em auto;
+
+  :hover {
+    opacity: 0.8;
+    transform: scale(1.1);
   }
 `;
 
@@ -100,8 +118,9 @@ export default class IndexPage extends React.Component<PageProps> {
                 <TypedHeading>Hi. I am David</TypedHeading>
                 <TypedText>
                   <p>
-                    I write JavaScript, Java, C#, Angular, CSS, LESS, SASS and develop Ionic Hybrid Mobile Apps. I'm currently learning
-                    React and GatsbyJs which this site is written in.
+                    I write mainly in JavaScript, Java, C#, Angular, CSS, LESS, SASS and have recently also developed a Ionic Hybrid Mobile
+                    App for viewing live league scores for Offical Fantasy Premier League Football game. I'm currently learning React and
+                    Gatsby, which this site is written in.
                   </p>
                 </TypedText>
                 <SocialLinks />
@@ -109,11 +128,12 @@ export default class IndexPage extends React.Component<PageProps> {
             </GridRow>
             <GridRow>
               <HomepageContent>
+                <ProfiilePic height="300px" width="300px" src="/assets/profile.jpg" alt="profile picture" />
                 <h2>About Me</h2>
                 <p>
-                  Though I am a results-driven front-end developer by day who have converted inactive designs to fully interactive,
-                  well-developed, accessible and standards-based user interfaces. I am completely enthusiast with a full stack environment
-                  and passionate about JavaScript world.
+                  Graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have over
+                  2.5 years of experience working with a major public sector client. I am passionate about Web Development and learning new
+                  technologies.
                 </p>
                 <hr />
                 <h2>Projects</h2>
