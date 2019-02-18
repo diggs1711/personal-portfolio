@@ -6,6 +6,18 @@ const SocialLinksContent = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-top: 2em;
+
+  > a {
+    transition: all 0.3s linear;
+    border-radius: 50%;
+
+    &:hover {
+      transform: scale(1.5);
+      filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+      opacity: 0.8;
+      border: 1px solid orange;
+    }
+  }
 `;
 export default class SocialLinks extends React.Component {
   render() {
