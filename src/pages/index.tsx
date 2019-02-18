@@ -78,6 +78,12 @@ const TypedHeading = styled.h1`
   margin-bottom: 0.55em;
   letter-spacing: 0.15em; /* Adjust as needed */
   animation: ${typing} 4s steps(40, end), ${blink} 0.75s step-end infinite;
+
+  @media ${media.phone} {
+    white-space: unset;
+    animation: none;
+    width: 100%;
+  }
 `;
 
 const TypedText = styled.div`
@@ -95,7 +101,7 @@ const ProfiilePic = styled.img`
   transition: all 0.3s linear;
   object-fit: cover;
   display: block;
-  margin: 2em auto 2em auto;
+  margin: 2em auto 5em auto;
 
   :hover {
     opacity: 0.8;
@@ -117,18 +123,14 @@ export default class IndexPage extends React.Component<PageProps> {
                 {/* <img src={config.siteLogo} /> */}
                 <TypedHeading>Hi. I am David</TypedHeading>
                 <TypedText>
-                  <p>
-                    I write mainly in JavaScript, Java, C#, Angular, CSS, LESS, SASS and have recently also developed a Ionic Hybrid Mobile
-                    App for viewing live league scores for Offical Fantasy Premier League Football game. I'm currently learning React and
-                    Gatsby, which this site is written in.
-                  </p>
+                  <p>A Web Developer who creates UX rich performant websites and web applications.</p>
                 </TypedText>
                 <SocialLinks />
               </HomepageContent>
             </GridRow>
             <GridRow>
               <HomepageContent>
-                <ProfiilePic height="300px" width="300px" src="/assets/profile.jpg" alt="profile picture" />
+                <ProfiilePic height="200px" width="200px" src="/assets/profile.jpg" alt="profile picture" />
                 <h2>About Me</h2>
                 <p>
                   Graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have over
