@@ -7,15 +7,14 @@ const ProjectContainer = styled.div`
   max-width: 25em;
   min-height: 10em;
   padding: 1em;
-  border-radius: 2em;
+  margin-bottom: 2em;
   display: grid;
   grid-template-columns: 60px 1fr;
   transition: all 0.5s linear;
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.05) translateX(15px);
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    transform: scale(1.1) translateX(15px);
   }
 `;
 
@@ -24,6 +23,10 @@ const ProjectImage = styled.img`
   border-radius: 50%;
   height: 50px;
   width: 50px;
+
+  &:hover {
+    filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.5));
+  }
 `;
 
 const ProjectContent = styled.div`
