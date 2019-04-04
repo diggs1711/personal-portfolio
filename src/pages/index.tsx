@@ -38,8 +38,8 @@ const GridRow: any = styled.div`
     props.background
       ? `linear-gradient(
       -185deg,
-      ${rgba(darken(0.1, props.theme.colors.primary), 0.7)}, 
-      ${rgba(lighten(0.1, props.theme.colors.grey.dark), 0.9)}), url(/assets/bg.jpg) no-repeat`
+      ${rgba(darken(0.1, props.theme.colors.primary), 0.7)},
+      ${rgba(lighten(0.1, props.theme.colors.grey.dark), 0.9)}), url(/assets/bg.webp) no-repeat`
       : null};
   background-size: cover;
   background-position: center;
@@ -56,7 +56,7 @@ const GridRow: any = styled.div`
   }
 `;
 
-const typing = keyframes` 
+const typing = keyframes`
   from { width : 0 }
   to {width: 100% }
 `;
@@ -133,7 +133,7 @@ export default class IndexPage extends React.Component<PageProps> {
             <GridRow>
               <HomepageContent>
                 <Zoom>
-                  <ProfiilePic height="200px" width="200px" src="/assets/profile.jpg" alt="profile picture" />
+                  <ProfiilePic height="200px" width="200px" src="/assets/profile.webp" alt="profile picture" />
                   <h2>About Me</h2>
                   <p>
                     Graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have

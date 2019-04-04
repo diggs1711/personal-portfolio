@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Zoom from 'react-reveal/Zoom';
-import { Link } from '@reach/router';
 
 const ProjectContainer = styled.div`
   max-width: 25em;
@@ -41,7 +40,7 @@ export default class Project extends React.Component {
     return (
       <Zoom>
         <ProjectContainer onClick={this.onProjectClicked}>
-          <ProjectImage src="/assets/ffl.png" />
+          <ProjectImage src="/assets/ffl.webp" />
           <ProjectContent>
             <ProjectHeading>Fantasy Football Live</ProjectHeading>
             <ProjectText>
