@@ -67,17 +67,17 @@ const blink = keyframes`
 `;
 
 const HomepageContent: any = styled.div`
-  max-width: 30rem;
+  max-width: 35rem;
   overflow: hidden;
   text-align: ${(props: any) => (props.center ? 'center' : 'left')};
 `;
 
 const TypedHeading = styled.h1`
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.1em solid orange; /* The typwriter cursor */
+  border-right: 0.08em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  margin-bottom: 0.55em;
+  min-height: 1.6em;
   letter-spacing: 0.15em; /* Adjust as needed */
   animation: ${typing} 4s steps(40, end), ${blink} 0.75s step-end infinite;
 
@@ -123,7 +123,7 @@ export default class IndexPage extends React.Component<PageProps> {
             <GridRow fullWidth={true} background={true}>
               <HomepageContent center={true}>
                 {/* <img src={config.siteLogo} /> */}
-                <TypedHeading>Hi. I'm David :) </TypedHeading>
+                <TypedHeading>Hi! I'm David :) </TypedHeading>
                 <TypedText>
                   <p>
                     A Software Developer who likes to creates UX rich, performant web applications. Don't be afraid to contact me through
@@ -131,6 +131,9 @@ export default class IndexPage extends React.Component<PageProps> {
                   </p>
                 </TypedText>
                 <SocialLinks />
+                <p>
+                  Check out my CV <a href="/assets/david-higgins-cv.pdf">here</a>!
+                </p>
               </HomepageContent>
             </GridRow>
             <GridRow>

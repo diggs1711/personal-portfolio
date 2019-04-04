@@ -32,14 +32,7 @@ const ProjectContent = styled.div`
   margin-left: 0.5em;
 `;
 
-const ProjectHeading = styled.h4`
-  ::after {
-    content: '';
-    border-bottom: 1px solid red;
-    width: 100%;
-    position: absolute;
-  }
-`;
+const ProjectHeading = styled.h4``;
 
 const ProjectText = styled.div``;
 export default class Project extends React.Component {
