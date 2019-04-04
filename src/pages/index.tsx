@@ -140,8 +140,8 @@ export default class IndexPage extends React.Component<PageProps> {
                   <h2>About Me</h2>
                   <p>
                     A graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have
-                    over 2.5 years of experience working in a Frontend Web Conultant . I am passionate about Web Development, learning new
-                    technologies and solving complex problems.
+                    over 2.5 years of experience working in a Frontend Web Conultant role. I am passionate about Web Development, learning
+                    new technologies and solving complex problems.
                   </p>
                   <hr />
                   <h2>Projects</h2>
