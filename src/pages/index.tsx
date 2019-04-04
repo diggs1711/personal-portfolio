@@ -123,9 +123,12 @@ export default class IndexPage extends React.Component<PageProps> {
             <GridRow fullWidth={true} background={true}>
               <HomepageContent center={true}>
                 {/* <img src={config.siteLogo} /> */}
-                <TypedHeading>Hi. I am David</TypedHeading>
+                <TypedHeading>Hi. I'm David :) </TypedHeading>
                 <TypedText>
-                  <p>A Web Developer who creates UX rich performant websites and web applications.</p>
+                  <p>
+                    A Software Developer who likes to creates UX rich, performant web applications. Don't be afraid to contact me through
+                    one the links below!
+                  </p>
                 </TypedText>
                 <SocialLinks />
               </HomepageContent>
@@ -136,9 +139,9 @@ export default class IndexPage extends React.Component<PageProps> {
                   <ProfiilePic height="200px" width="200px" src="/assets/profile.webp" alt="profile picture" />
                   <h2>About Me</h2>
                   <p>
-                    Graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have
-                    over 2.5 years of experience working with a major public sector client. I am passionate about Web Development and
-                    learning new technologies.
+                    A graduate of National University Ireland, Galway with a honours degree in Electronic and Computer Engineering. I have
+                    over 2.5 years of experience working in a Frontend Web Conultant . I am passionate about Web Development, learning new
+                    technologies and solving complex problems.
                   </p>
                   <hr />
                   <h2>Projects</h2>

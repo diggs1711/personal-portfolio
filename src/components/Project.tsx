@@ -13,7 +13,7 @@ const ProjectContainer = styled.div`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.1) translateX(15px);
+    transform: scale(1.02) translateX(15px);
   }
 `;
 
@@ -32,7 +32,14 @@ const ProjectContent = styled.div`
   margin-left: 0.5em;
 `;
 
-const ProjectHeading = styled.h4``;
+const ProjectHeading = styled.h4`
+  ::after {
+    content: '';
+    border-bottom: 1px solid red;
+    width: 100%;
+    position: absolute;
+  }
+`;
 
 const ProjectText = styled.div``;
 export default class Project extends React.Component {
