@@ -33,7 +33,7 @@ const GridRow: any = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${(props: any) => (props.fullWidth ? `100vh` : `100%`)};
+  min-height: ${(props: any) => (props.fullWidth ? `100vh` : `100%`)};
   background: ${(props: any) =>
     props.background
       ? `linear-gradient(
