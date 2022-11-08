@@ -73,6 +73,7 @@
   "dependencies": {
     "gatsby-plugin-google-tagmanager": "^2.0.5",
     "react-reveal": "^1.2.2",
-    "react-share": "^2.4.0"
+    "react-share": "^2.4.0",
+    "darkreader": "4.9.58"
   }
 }

@@ -4,7 +4,7 @@ import { darken, lighten } from 'polished';
 import rgba from 'polished/lib/color/rgba';
 import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
-
+import { enable } from 'darkreader'
 const HeaderWrapper: any = styled.header`
   position: relative;
   background: linear-gradient(
@@ -53,6 +53,12 @@ interface Props {
 }
 
 export class Header extends React.PureComponent<Props> {
+  enable({
+    brightness: 100,
+    contrast: 90,
+    sepia: 10,
+  });
+
   public render() {
     return (
       <HeaderWrapper banner={this.props.banner || config.defaultBg}>
